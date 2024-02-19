@@ -1,16 +1,19 @@
 # Continuous Delivery of on AWS Cloud
 <h2>Scenario</h2>
 <p>
-The objective of our Cloud DevOps Project is to re-architect and refactor our existing services for the AWS Cloud with a focus on enhancing agility, reducing operational overhead, eliminating upfront costs, and leveraging Infrastructure as Code (IaaC), Platform as a Service (PaaS), and Software as a Service (SaaS) models.
+In our Cloud DevOps Project, we address the challenges associated with the traditional software development lifecycle, where product development teams often grapple with manual and time-consuming processes. The focus is on Continuous Delivery (CD) as a practice to streamline the deployment and testing phases, leveraging the capabilities of AWS Cloud to propel the development pipeline into an agile and efficient paradigm.
 
-Currently, our services are spread across physical machines, virtual machines, and some existing cloud instances like EC2. This diversity involves managing a wide array of services, including databases, application layers, webservers, and network services like DNS and DHCP. To effectively handle this complexity, various teams such as Cloud Computing, Virtualization, DataCenter Operations, Monitoring, and System Administration have to collaborate, leading to operational overhead and challenges with uptime and scaling.
+In a typical product development setting, developers frequently contribute code changes that necessitate Build & Test cycles. The deployment process, traditionally handled by Operations teams, often becomes a bottleneck. Manual deployment is time-consuming, and the lack of Ops knowledge among developers and testers creates dependencies on dedicated Ops professionals. The need for constant CI/CD server maintenance adds to operational overhead.
 
-To address these issues, we aim to transition to a cloud setup focused on PaaS and SaaS offerings, embracing IaaC principles for flexible infrastructure, automation, and a pay-as-you-go model. Our chosen AWS services such as EC2 Instances, ELB, Autoscaling, EFS/S3, RDS, ElastiCache, ActiveMQ, Route53, and CloudFront will enable us to achieve these goals effectively.
+In the Agile Software Development Life Cycle (SDLC), frequent code changes demand a faster and more efficient deployment mechanism. The reliance on manual deployment processes results in prolonged turnaround times and an increased need for operational expertise. The scenario often requires organizations to hire Ops professionals or outsource these tasks, leading to significant dependencies on Ops teams and a burden on CI/CD server maintenance.
 
-Using AWS Elastic Beanstalk will streamline our deployment process by automatically provisioning EC2 instances and hosting applications without the need for manual management. Leveraging S3 for storing artifacts, RDS for databases, and services like ElastiCache for memcache and ActiveMQ for RabbitMQ will ensure easy scalability, rapid setup based on requirements, automated backups, and seamless operations.
+To address these challenges, our solution involves embracing Platform as a Service (PaaS) and Software as a Service (SaaS) cloud services, creating disposable environments, and automating the entire CI/CD process. The goal is to execute the BUILD, TEST, Deploy, and TEST again for every code commit. By implementing CD practices, we aim to achieve short Mean Time to Recovery (MTTR), agility, fault isolation, and minimal operational interventions.
 
-Route 53 will handle DNS, CloudFront will serve as our Content Delivery Network (CDN), and Auto Scaling coupled with Elastic Load Balancing (ELB) will ensure dynamic load management and high availability. Embracing these AWS services will not only streamline our infrastructure but also optimize costs, reduce manual efforts, and improve our system's overall reliability and flexibility.
+In our pursuit of an optimal Continuous Delivery pipeline, we leverage a suite of AWS services catering to each phase of the CD pipeline. CodeCommit, CodeArtifact, CodeBuild, CodeDeploy, and CodePipeline form the backbone of our automated deployment and testing process. Additionally, SonarCloud and Checkstyle contribute to code analysis and quality checks, ensuring a high standard of software development.
 
+Our objectives include minimizing or eliminating operational overhead, achieving a short MTTR, enabling a fast turnaround on feature changes, and minimizing disruptions in the development lifecycle.
+
+By transitioning to Continuous Delivery on the AWS Cloud, our project seeks to revolutionize the development pipeline. Through the adoption of cloud-native practices and the integration of powerful AWS services, we aim to create an environment where software changes are swiftly and reliably delivered, fostering a culture of agility, efficiency, and minimal disruption.
 </p>
 
 <h2>Architecture of AWS Services</h2>
